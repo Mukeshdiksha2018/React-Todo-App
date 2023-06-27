@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import Todolist from './Todolist';
 
 class Addtodo extends Component {
 
     state = {
         defaultvalue : "",
-        value : this.props.Addtodovalue,
+        value : "",
 
     }
 
@@ -13,8 +12,6 @@ class Addtodo extends Component {
         
         return (
             <div className='container'>
-
-                <Todolist Tododata={mydata} />
 
                 <form onSubmit={this.whensubmit} className='border-top border-bottom'>
                     <div className="input-group m-3">
@@ -28,12 +25,15 @@ class Addtodo extends Component {
 
     mytodo= (event) =>{
         this.setState({value : event.target.value});
+
     };
 
     whensubmit = (event) => {
         event.preventDefault();
-        this.props.myAddToDo(this.state.value);
+        this.props.Addtolist(this.state.value);
+
         this.setState({value:""});
+    // }
     }
 }
 

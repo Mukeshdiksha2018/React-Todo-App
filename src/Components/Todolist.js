@@ -13,7 +13,7 @@ class Todolist extends Component {
                         <input type='checkbox'/>
                     </td>
                     <td style={{width:200}} className='text-center'>
-                        {this.props.myToDo}
+                        {this.props.myToDo.value}
                     </td>
                     <td style={{width:50}} className='text-center'>
                         <button onClick={()=>{this.props.myDelete(this.props.myToDo)}} className='btn btn-danger'>Delete</button>
