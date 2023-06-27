@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Addtodo from './Components/Addtodo';
+import Todo from './Components/Todo';
 
 class App extends Component {
   render() { 
     return (
-      <div className='container'>
-        <h1 className='text-center'>A Todo App using ReactJS</h1>
-        <Addtodo/>
+      <div className='container m-3'>
+        <h1 className='text-center mb-5'>A Todo App using ReactJS</h1>
+        <Todo/>
       </div>
     );
   }
